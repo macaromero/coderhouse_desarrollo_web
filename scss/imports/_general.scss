@@ -1,0 +1,54 @@
+/* Reseteo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Estilos generales */
+body {
+    background-color: #e7ecef;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+section {
+    margin-bottom: 4%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 29px;
+    color: #8b8c89;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 2%;
+}
+
+h4 {
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+nav, footer {
+    // background-image: linear-gradient(to right, rgb(96, 150, 186), rgb(167, 207,239), rgb(96, 150, 186));
+    background-color: rgb(96, 150, 186);
+    color: white;
+    padding: 1% 4%;
+}

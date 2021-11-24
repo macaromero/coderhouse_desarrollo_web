@@ -1,0 +1,316 @@
+$celesteOscuro: rgb(96, 150, 186);
+$celesteHover: #497e9e;
+$blanco: #e7ecef;
+$gris: rgba($color: #8b8c89, $alpha: 0.2);;
+$azul: #274c77;
+$fuente-home: 56px;
+$w-100: 100%;
+$w-barrasHabilidades: (
+    w100: 100%,
+    w90: 90%,
+    w80: 80%,
+    w75: 75%,
+    w70: 70%,
+    w60: 60%,
+    w50: 50%
+);
+
+@mixin barrasHabilidades($border, $width, $color) {
+    height: 16px;
+    border-radius: $border;
+    -webkit-border-radius: $border;
+    -moz-border-radius: $border;
+    -ms-border-radius: $border;
+    -o-border-radius: $border;
+    width: $width;
+    background-color: $color;
+}
+
+
+/* Estilos sección HOME */
+@media only screen and (min-width: 992px) {
+    #home { 
+        background-image: linear-gradient(to bottom, $celesteOscuro, $blanco);
+    }
+
+    .home__container {
+        padding-left: 4.6%;
+    }
+
+    .home__container--padding {
+        padding: 0 4.6%;
+    }
+
+    .home__titulo {
+        color: $blanco;
+        font-size: $fuente-home;
+        text-align: left;
+        margin-bottom: 0;
+        font-weight: 600;
+        text-transform: none;
+    }
+
+    .home__carousel {
+        z-index: 0;
+    }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    #home { 
+        background-image: linear-gradient(to bottom, $celesteOscuro, $blanco);
+    }
+
+    .home__container {
+        padding-left: 4.6%;
+    }
+    
+    .home__container--padding {
+        padding: 0 4.6%;
+    }
+
+    .home__titulo {
+        color: $blanco;
+        font-size: $fuente-home - 10;
+        text-align: left;
+        margin-bottom: 0;
+        font-weight: 600;
+        text-transform: none;
+    }
+
+    .home__carousel {
+        z-index: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    #home { 
+        background-image: linear-gradient(to bottom, $celesteOscuro, $blanco);
+    }
+
+    .home__container {
+        padding-left: 4.6%;
+    }
+    
+    .home__container--padding {
+        padding: 0 4.6%;
+    }
+
+    .home__titulo {
+        color: $blanco;
+        font-size: $fuente-home - 20;
+        text-align: left;
+        margin-bottom: 0;
+        font-weight: 600;
+        text-transform: none;
+    }
+
+    .home__carousel {
+        z-index: 0;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    #home { 
+        background-image: linear-gradient(to bottom, $celesteOscuro, $blanco);
+    }
+
+    .home__container {
+        padding-left: 4.6%;
+    }
+    
+    .home__container--padding {
+        padding: 0 4.6%;
+    }
+
+    .home__titulo {
+        color: $blanco;
+        font-size: $fuente-home - 20;
+        text-align: left;
+        margin-bottom: 0;
+        font-weight: 600;
+        text-transform: none;
+    }
+
+    .home__carousel {
+        z-index: 0;
+    }
+}
+
+
+/* Estilos sección HABILIDADES */
+.habilidades__barraDetras {
+    @include barrasHabilidades(1.25rem, 100%, $gris);
+}
+
+@each $barra, $width in $w-barrasHabilidades {
+    .habilidades__barraDelante--#{$barra} {
+        @include barrasHabilidades(1.25rem, $width, $azul)
+    }
+}
+
+
+/* Estilos sección PORTFOLIO */
+.portfolio__row:hover .card:not(:hover) {
+    opacity: 0.7;
+    background-color: $blanco;
+    border-color: $blanco;
+}
+
+.imgPortfolio {
+    width: $w-100;
+}
+
+
+/* Estilos sección SOBRE MÍ */
+.sobreMi__col--aside--img {
+    width: $w-100;
+}
+
+
+/* Estilos sección CONTACTO */
+.contacto__form--boton {
+    background-color: $celesteOscuro;
+    border-color: $celesteOscuro;
+    color: $blanco;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+.contacto__form--boton:hover {
+    background-color: $celesteHover;
+    border-color: $celesteHover;
+}
+
+.contacto__aside--col--img {
+    width: ($w-100 / 2) + 5;
+}
+
+
+/* Estilos sección MAPA DEL SITIO */
+@media only screen and (min-width: 992px) {
+    .mapa {
+        border-bottom-color: $gris;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+    }
+    
+    .mapa__col {
+        width: auto;
+    }
+    
+    .mapa__col--border {
+        border-right-color: $gris;
+        border-right-width: 1px;
+        border-right-style: solid;
+    }
+    
+    .mapa__titulo {
+        background-color: $celesteOscuro;
+        color: $blanco;
+        padding: 2% 0;
+        margin-top: 0;
+    }
+    
+    .mapa__subtitulo {
+        font-size: 1.4rem;
+        color: $azul;
+        text-transform: none;
+        margin-bottom: 3%;
+    }
+    
+    .mapa__list {
+        padding-left: 1.4rem;
+        margin-top: 4%;
+    }
+    
+    .mapa__ancla {
+        color: $celesteOscuro;
+        text-decoration: underline;
+    }
+    
+    .mapa__ancla:hover {
+        color: $celesteHover;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .mapa {
+        border-bottom-color: $gris;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+    }
+    
+    .mapa__col {
+        width: auto;
+    }
+    
+    .mapa__titulo {
+        background-color: $celesteOscuro;
+        color: $blanco;
+        padding: 2% 0;
+        margin-top: 0;
+    }
+    
+    .mapa__subtitulo {
+        font-size: 1.4rem;
+        color: $azul;
+        text-transform: none;
+        margin-bottom: 3%;
+    }
+    
+    .mapa__list {
+        padding-left: 1.4rem;
+        margin-top: 4%;
+    }
+    
+    .mapa__ancla {
+        color: $celesteOscuro;
+        text-decoration: underline;
+    }
+    
+    .mapa__ancla:hover {
+        color: $celesteHover;
+    }
+}
+
+
+/* Estilos sección 404 */
+.error__h3 {
+    font-size: 72px;
+    color: $azul;
+    margin-top: 6%;
+    margin-bottom: 0;
+}
+
+.error__h4 {
+    color: $azul;
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.error__boton {
+    background-color: $azul;
+    height: 80%;
+    border-radius: 0.25rem;
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    -ms-border-radius: 0.25rem;
+    -o-border-radius: 0.25rem;
+    margin-bottom: 20%;
+}
+
+.error__boton--ancla {
+    color: $blanco;
+}
+
+.error__boton--texto {
+    text-align: center;
+    position: relative;
+    top: 31%;
+}
+
+.error__boton--ancla:hover, .error__boton:hover {
+    color: $blanco;
+    background-color: #0f2e47;
+}
