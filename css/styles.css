@@ -101,7 +101,7 @@ nav, footer {
   .miga {
     padding: 0;
     margin: 0.5% 3%;
-    background-color: #e7ecef;
+    background-color: rgba(231, 236, 239, 0);
     color: #274c77; }
   .miga__lista, .miga__listaItem {
     color: #274c77; }
@@ -470,9 +470,31 @@ nav, footer {
 .imgPortfolio {
   width: 100%; }
 
-/* Estilos sección SOBRE MÍ */
-.sobreMi__col--aside--img {
+iframe {
   width: 100%; }
+
+.portfolio__cardTitulo {
+  font-size: 1rem;
+  letter-spacing: -0.061em; }
+
+/* Estilos sección SOBRE MÍ */
+@media only screen and (min-width: 992px) {
+  .sobreMi__aside--img {
+    width: 100%; }
+  .sobreMi__section--textoResaltado {
+    font-size: 31px; }
+  .sobreMi__section {
+    text-align: left;
+    margin-left: 0; } }
+
+@media only screen and (max-width: 991px) {
+  .sobreMi__aside--img {
+    width: 100%;
+    margin-bottom: 3%; }
+  .sobreMi__section--textoResaltado {
+    font-size: 23px; }
+  .sobreMi__section {
+    text-align: center; } }
 
 /* Estilos sección CONTACTO */
 .contacto__form--boton {
