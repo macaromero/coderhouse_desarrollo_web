@@ -15,6 +15,16 @@ $w-barrasHabilidades: (
     w50: 50%
 );
 
+
+@mixin tituloHome ($f-size) {
+    color: $blanco;
+    font-size: $f-size;
+    text-align: left;
+    margin-bottom: 0;
+    font-weight: 600;
+    text-transform: none;
+}
+
 @mixin barrasHabilidades($border, $width, $color) {
     height: 16px;
     border-radius: $border;
@@ -42,12 +52,7 @@ $w-barrasHabilidades: (
     }
 
     .home__titulo {
-        color: $blanco;
-        font-size: $fuente-home;
-        text-align: left;
-        margin-bottom: 0;
-        font-weight: 600;
-        text-transform: none;
+        @include tituloHome($fuente-home)
     }
 
     .home__carousel {
@@ -69,12 +74,7 @@ $w-barrasHabilidades: (
     }
 
     .home__titulo {
-        color: $blanco;
-        font-size: $fuente-home - 10;
-        text-align: left;
-        margin-bottom: 0;
-        font-weight: 600;
-        text-transform: none;
+        @include tituloHome($fuente-home - 10)
     }
 
     .home__carousel {
@@ -96,12 +96,7 @@ $w-barrasHabilidades: (
     }
 
     .home__titulo {
-        color: $blanco;
-        font-size: $fuente-home - 20;
-        text-align: left;
-        margin-bottom: 0;
-        font-weight: 600;
-        text-transform: none;
+        @include tituloHome($fuente-home - 20)
     }
 
     .home__carousel {
@@ -123,12 +118,7 @@ $w-barrasHabilidades: (
     }
 
     .home__titulo {
-        color: $blanco;
-        font-size: $fuente-home - 20;
-        text-align: left;
-        margin-bottom: 0;
-        font-weight: 600;
-        text-transform: none;
+        @include tituloHome($fuente-home - 20)
     }
 
     .home__carousel {
@@ -138,12 +128,12 @@ $w-barrasHabilidades: (
 
 
 /* Estilos sección HABILIDADES */
-.habilidades__barraDetras {
+.habilidades__barra-detras {
     @include barrasHabilidades(1.25rem, 100%, $gris);
 }
 
 @each $barra, $width in $w-barrasHabilidades {
-    .habilidades__barraDelante--#{$barra} {
+    .habilidades__barra-delante--#{$barra} {
         @include barrasHabilidades(1.25rem, $width, $azul)
     }
 }
@@ -156,7 +146,7 @@ $w-barrasHabilidades: (
     border-color: $blanco;
 }
 
-.imgPortfolio {
+.img-portfolio {
     width: $w-100;
 }
 
@@ -169,39 +159,37 @@ iframe {
     letter-spacing: -0.061em;
 }
 
+
 /* Estilos sección SOBRE MÍ */
 @media only screen and (min-width: 992px) {
-    .sobreMi__aside--img {
+    .sobre-mi__aside--img {
         width: $w-100;
     }
     
-    .sobreMi__section--textoResaltado {
+    .sobre-mi__section--texto-resaltado {
         font-size: 31px;
     }
 
-    .sobreMi__section {
+    .sobre-mi__section {
         text-align: left;
         margin-left: 0;
     }
 }
 
 @media only screen and (max-width: 991px) {
-    .sobreMi__aside--img {
+    .sobre-mi__aside--img {
         width: $w-100;
         margin-bottom: 3%;
     }
     
-    .sobreMi__section--textoResaltado {
+    .sobre-mi__section--texto-resaltado {
         font-size: 23px;
     }
 
-    .sobreMi__section {
+    .sobre-mi__section {
         text-align: center;
     }
 }
-
-
-
 
 
 /* Estilos sección CONTACTO */
@@ -219,7 +207,7 @@ iframe {
     border-color: $celesteHover;
 }
 
-.contacto__aside--col--img {
+.contacto__aside--img {
     width: ($w-100 / 2) + 5;
 }
 

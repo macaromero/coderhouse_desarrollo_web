@@ -3,28 +3,18 @@ $azul: #274c77;
 
 
 /* Estilos textos */
-.textosGris {
+.textos-gris {
     color: $gris;
     text-align: center;
     margin: 1.4rem 2rem;
 }
 
-.textosAzul {
+.textos-azul {
     color: $azul;
-}
-
-.textosBlanco {
-    color: white;
 }
 
 .titulos { 
     width: 100%;
     margin-top: 3rem;
     margin-bottom: 4rem;
-}
-
-.justificado {
-    text-align: left;
-    margin-left: 0;
-    margin-right: 0;
 }

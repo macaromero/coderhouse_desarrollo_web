@@ -45,28 +45,20 @@ nav, footer {
   padding: 1% 4%; }
 
 /* Estilos textos */
-.textosGris {
+.textos-gris {
   color: #8b8c89;
   text-align: center;
   margin: 1.4rem 2rem; }
 
-.textosAzul {
+.textos-azul {
   color: #274c77; }
-
-.textosBlanco {
-  color: white; }
 
 .titulos {
   width: 100%;
   margin-top: 3rem;
   margin-bottom: 4rem; }
 
-.justificado {
-  text-align: left;
-  margin-left: 0;
-  margin-right: 0; }
-
-/* Estilos navbar */
+/* Estilos navbar y breadcrumb */
 @media only screen and (min-width: 768px) {
   h1 {
     text-transform: uppercase;
@@ -381,7 +373,7 @@ nav, footer {
     z-index: 0; } }
 
 /* Estilos sección HABILIDADES */
-.habilidades__barraDetras {
+.habilidades__barra-detras {
   height: 16px;
   border-radius: 1.25rem;
   -webkit-border-radius: 1.25rem;
@@ -391,7 +383,7 @@ nav, footer {
   width: 100%;
   background-color: rgba(139, 140, 137, 0.2); }
 
-.habilidades__barraDelante--w100 {
+.habilidades__barra-delante--w100 {
   height: 16px;
   border-radius: 1.25rem;
   -webkit-border-radius: 1.25rem;
@@ -401,7 +393,7 @@ nav, footer {
   width: 100%;
   background-color: #274c77; }
 
-.habilidades__barraDelante--w90 {
+.habilidades__barra-delante--w90 {
   height: 16px;
   border-radius: 1.25rem;
   -webkit-border-radius: 1.25rem;
@@ -411,7 +403,7 @@ nav, footer {
   width: 90%;
   background-color: #274c77; }
 
-.habilidades__barraDelante--w80 {
+.habilidades__barra-delante--w80 {
   height: 16px;
   border-radius: 1.25rem;
   -webkit-border-radius: 1.25rem;
@@ -421,7 +413,7 @@ nav, footer {
   width: 80%;
   background-color: #274c77; }
 
-.habilidades__barraDelante--w75 {
+.habilidades__barra-delante--w75 {
   height: 16px;
   border-radius: 1.25rem;
   -webkit-border-radius: 1.25rem;
@@ -431,7 +423,7 @@ nav, footer {
   width: 75%;
   background-color: #274c77; }
 
-.habilidades__barraDelante--w70 {
+.habilidades__barra-delante--w70 {
   height: 16px;
   border-radius: 1.25rem;
   -webkit-border-radius: 1.25rem;
@@ -441,7 +433,7 @@ nav, footer {
   width: 70%;
   background-color: #274c77; }
 
-.habilidades__barraDelante--w60 {
+.habilidades__barra-delante--w60 {
   height: 16px;
   border-radius: 1.25rem;
   -webkit-border-radius: 1.25rem;
@@ -451,7 +443,7 @@ nav, footer {
   width: 60%;
   background-color: #274c77; }
 
-.habilidades__barraDelante--w50 {
+.habilidades__barra-delante--w50 {
   height: 16px;
   border-radius: 1.25rem;
   -webkit-border-radius: 1.25rem;
@@ -467,7 +459,7 @@ nav, footer {
   background-color: #e7ecef;
   border-color: #e7ecef; }
 
-.imgPortfolio {
+.img-portfolio {
   width: 100%; }
 
 iframe {
@@ -479,21 +471,21 @@ iframe {
 
 /* Estilos sección SOBRE MÍ */
 @media only screen and (min-width: 992px) {
-  .sobreMi__aside--img {
+  .sobre-mi__aside--img {
     width: 100%; }
-  .sobreMi__section--textoResaltado {
+  .sobre-mi__section--texto-resaltado {
     font-size: 31px; }
-  .sobreMi__section {
+  .sobre-mi__section {
     text-align: left;
     margin-left: 0; } }
 
 @media only screen and (max-width: 991px) {
-  .sobreMi__aside--img {
+  .sobre-mi__aside--img {
     width: 100%;
     margin-bottom: 3%; }
-  .sobreMi__section--textoResaltado {
+  .sobre-mi__section--texto-resaltado {
     font-size: 23px; }
-  .sobreMi__section {
+  .sobre-mi__section {
     text-align: center; } }
 
 /* Estilos sección CONTACTO */
@@ -509,7 +501,7 @@ iframe {
   background-color: #497e9e;
   border-color: #497e9e; }
 
-.contacto__aside--col--img {
+.contacto__aside--img {
   width: 55%; }
 
 /* Estilos sección MAPA DEL SITIO */

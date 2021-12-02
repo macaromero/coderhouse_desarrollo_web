@@ -45,7 +45,7 @@ $decena: 10px;
     display: $display;
 }
 
-/* Estilos navbar */
+/* Estilos navbar y breadcrumb */
 @media only screen and (min-width: 768px) {
     h1 {
         @include h1();
