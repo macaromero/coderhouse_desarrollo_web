@@ -3,253 +3,87 @@ $celeste: rgb(125, 173, 207);
 $celesteOscuro: rgb(96, 150, 186);
 $blanco: #e7ecef;
 $blancoOscuro: rgb(203, 231, 255);
+$azul: #274c77;
 
-$unidad: 1%;
 $decena: 10px;
+$w-100: 100%;
 
-
-@mixin h1 {
-    text-transform: uppercase;
-    font-weight: 700;
-    line-height: $decena * 3.3;
-}
-
-@mixin h2 {
-    font-size: $decena * 1.5;
-    text-transform: uppercase;
-    font-weight: 700;
-    line-height: $decena * 2.25;
-}
-
-@mixin ul {
-    display: none;
-    position: absolute;
-    list-style-type: none;
-    padding: $unidad * 2  $unidad * 2.8;
-    background-image: linear-gradient(to left, $celesteOscuro, $celeste);
-    margin-bottom: 0;
-}
-
-@mixin li {
-    a {
-        padding: 0 $unidad;
-        color: $blancoOscuro;
-    }
-
-    a:hover {
-        color: $blanco;
-    }
+@mixin miga ($color) {
+    padding: 0;
+    margin: 0.5% 3%;
+    color: $azul;
+    background-color: $color;
 }
 
 @mixin display($display) {
     display: $display;
 }
 
-/* Estilos navbar y breadcrumb */
+
+/* Estilos NAVBAR */
+.barra__logo--img {
+    width: 2.6em;
+}
+
+.barra__ancla {
+    color: $blancoOscuro;
+}
+
+.barra__ancla:hover {
+    color: $blanco;
+}
+
+.barra__menu-small:focus {
+    box-shadow: none;
+    border: 0.1px solid white;
+}
+
+.barra__menu-small--icono {
+    background-image: url("../../media/menu.png");
+}
+
+
+/* Estilos BREADCRUMB */
 @media only screen and (min-width: 768px) {
-    h1 {
-        @include h1();
-        font-size: $decena * 2.2;
-        margin: 0;
-    }
-    
-    h2 {
-        @include h2();
-        margin: 0;
-    }
-
-    .barra__segundaRow--menuLarge {
-        ul {
-            list-style-type: none;
-            @include display(grid);
-            grid-template-columns: repeat(5, max-content);
-            grid-column-gap: $unidad * 5;
-            justify-content: end;
-            margin-bottom: 0;
-        }
-        a {
-            color: $blancoOscuro;
-        }
-    }
-
-    .barra__segundaRow {
-        ul {
-            a:hover {
-                color: $blanco;
-                transform: scale(1.07, 1.07);
-                -webkit-transform: scale(1.07, 1.07);
-                -moz-transform: scale(1.07, 1.07);
-                -ms-transform: scale(1.07, 1.07);
-                -o-transform: scale(1.07, 1.07);
-            }
-        }
-
-        .barra__segundaRow--menuSmall {
-            @include display(none);
-        }
-    }
-
     .miga {
-        padding: 0;
-        margin: 0.5% 3%;
-        background-color: rgba($color: #e7ecef, $alpha: 0);
-        color: #274c77;  
+        @include miga(rgba($color: $blanco, $alpha: 0));
     }
 
     .miga__lista, .miga__listaItem {
-        color: #274c77;
+        color: $azul;
     }
 
     .miga__listaItem:hover {
-        color: rgb(96, 150, 186);
+        color: $celesteOscuro;
     }
 }
 
-@media only screen and (max-width: 767px) and (min-width: 576px) {
-    h1 {
-        @include h1();
-        font-size: $decena * 2.2;
-        margin-bottom: 0;
-    }
-    
-    h2 {
-        @include h2();
-        margin-bottom: 0;
-    }
-
-    .barra__segundaRow {
-        .barra__segundaRow--menuLarge {
-            @include display(none);
-        }
-
-        .barra__segundaRow--menuSmall {
-            .barra__segundaRow--menuSmall--img {
-                color: $blancoOscuro;
-                position: relative;
-            }
-
-            .barra__segundaRow--menuSmall--lista {
-                ul {
-                    @include ul();
-                    right: $unidad * 8;
-
-                    li {
-                        @include li();
-                    }
-                }
-            }
-        }
-
-        .barra__segundaRow--menuSmall:hover {
-            .barra__segundaRow--menuSmall--img {
-                transform: scaleX(10%);
-                -webkit-transform: scaleX(10%);
-                -moz-transform: scaleX(10%);
-                -ms-transform: scaleX(10%);
-                -o-transform: scaleX(10%);
-            }
-
-            .barra__segundaRow--menuSmall--lista {
-                ul {
-                    @include display(block);
-                }
-            }
-        }
-    } 
-
-    .barra__segundaRow--menuSmall--img {
-        margin-bottom: $unidad * 3;
-    }
-    
+@media only screen and (max-width: 767px) and (min-width: 576px) {    
     .miga {
-        padding: 0;
-        margin: 0.5% 3%;
-        background-color: #e7ecef;
-        color: #274c77;  
+        @include miga($blanco);
     }
 
     .miga__lista, .miga__listaItem {
-        color: #274c77;
+        color: $azul;
     }
 
     .miga__listaItem:hover {
-        color: rgb(96, 150, 186);
+        color: $celesteOscuro;
     }
 }
 
 @media only screen and (max-width: 575px) {
-    h1 {
-        @include h1();
-        font-size: $decena * 1.8;
-        margin-bottom: 0;
-    }
-    
-    h2 {
-        @include h2();
-        font-size: $decena * 1.1;
-        line-height: $decena - 0.5;
-        margin-bottom: 0;
-    }
-
-    .barra__segundaRow {
-        .barra__segundaRow--menuLarge {
-            @include display(none);
-        }
-
-        .barra__segundaRow--menuSmall {
-            .barra__segundaRow--menuSmall--img {
-                color: $blancoOscuro;
-                position: relative;
-                width: $decena * 3.3;
-            }
-
-            .barra__segundaRow--menuSmall--lista {
-                ul {
-                    @include ul();
-                    right: $unidad * 9;
-
-                    li {
-                        @include li();
-                    }
-                }
-            }
-        }
-
-        .barra__segundaRow--menuSmall:hover {
-            .barra__segundaRow--menuSmall--img {
-                transform: scaleX(10%);
-                -webkit-transform: scaleX(10%);
-                -moz-transform: scaleX(10%);
-                -ms-transform: scaleX(10%);
-                -o-transform: scaleX(10%);
-            }
-
-            .barra__segundaRow--menuSmall--lista {
-                ul {
-                    @include display(block);
-                }
-            }
-        }
-    } 
-
-    .barra__segundaRow--menuSmall--img {
-        margin-bottom: $unidad * 3;
-    }
-
     .miga {
-        padding: 0;
-        margin: 0.5% 3%;
-        background-color: #e7ecef;
-        color: #274c77;  
+        @include miga($blanco);
         font-size: 14px;
     }
 
     .miga__lista, .miga__listaItem {
-        color: #274c77;
+        color: $azul;
     }
 
     .miga__listaItem:hover {
-        color: rgb(96, 150, 186);
+        color: $celesteOscuro;
     }
 }
 
@@ -284,7 +118,7 @@ $decena: 10px;
     }
     
     .footer__iconos--logo--img {
-        width: 100%;
+        width: $w-100;
     }
     
     .footer__texto {
@@ -332,7 +166,7 @@ $decena: 10px;
     }
     
     .footer__iconos--logo--img {
-        width: 100%;
+        width: $w-100;
     }
     
     .footer__texto {
@@ -380,7 +214,7 @@ $decena: 10px;
     }
     
     .footer__iconos--logo--img {
-        width: 100%;
+        width: $w-100;
     }
     
     .footer__texto {

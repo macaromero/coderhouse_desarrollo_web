@@ -18,55 +18,37 @@
 <body>
     <header>
         <!--Navbar-->
-        <nav>
-            <div class="container-fluid barra">
-                <div class="row barra__primerRow">
-                    <h1>
-                        <a href="../index.html" class="text-white barra__segundaRow--titulo">
-                            MACARENA ROMERO
-                        </a>
-                    </h1>
-                </div>
-                <div class="row justify-content-around barra__segundaRow">
-                    <div class="col-6 barra__segundaRow--subtitulo">
-                        <h2>DISEÑO DIGITAL</h2>
-                    </div>
-                    
-                    <div class="col-6 text-end barra__segundaRow--menuSmall">
-                        <img src="../media/menu.png" alt="Menú" class="barra__segundaRow--menuSmall--img">
-                        <div class="barra__segundaRow--menuSmall--lista">
-                            <ul>
-                                <li>
-                                    <a href="../index.html">HOME</a>
-                                </li>
-                                <li>
-                                    <a href="./portfolio.html">PORTFOLIO</a>
-                                </li>
-                                <li>
-                                    <a href="./habilidades.html">HABILIDADES</a>
-                                </li>
-                                <li>
-                                    <a href="./sobre-mi.html">SOBRE MÍ</a>
-                                </li>
-                                <li>
-                                    <a href="./contacto.html">CONTACTO</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-6 barra__segundaRow--menuLarge">
-                        <ul>
-                            <a href="../index.html"><li>HOME</li></a>
-                            <a href="./portfolio.html"><li>PORTFOLIO</li></a>
-                            <a href="./habilidades.html"><li>HABILIDADES</li></a>
-                            <a href="./sobre-mi.html"><li>SOBRE MÍ</li></a>
-                            <a href="./contacto.html"><li>CONTACTO</li></a>
-                        </ul>
-                    </div>                    
-                </div>       
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand barra__logo" href="../index.html">
+                  <h1>
+                    <img src="../media/logo.png" alt="Logo MR" class="d-inline-block barra__logo--img">
+                  </h1>
+                </a>
+              <button class="navbar-toggler barra__menu-small" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon barra__menu-small--icono"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end barra__links" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active barra__ancla" aria-current="page" href="../index.html">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link barra__ancla" href="./portfolio.html">PORTFOLIO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link barra__ancla" href="./habilidades.html">HABILIDADES</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link barra__ancla" href="./sobre-mi.html">SOBRE MÍ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link barra__ancla" href="./contacto.html">CONTACTO</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </nav> 
+        </nav>
 
         <!-- Breadcrumb -->
         <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb" class="miga">
@@ -81,7 +63,7 @@
         <!--Sección portfolio-->
         <div class="container">
             <div class="row">
-                <h3 class="titulos">PORTFOLIO</h3>
+                <h2 class="titulos">PORTFOLIO</h2>
             </div>
 
             <section>
