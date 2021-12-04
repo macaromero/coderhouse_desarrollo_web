@@ -13,6 +13,8 @@ $w-100: 100%;
     margin: 0.5% 3%;
     color: $azul;
     background-color: $color;
+    position: relative;
+    top: 215%;
 }
 
 @mixin display($display) {
@@ -60,7 +62,7 @@ $w-100: 100%;
 
 @media only screen and (max-width: 767px) and (min-width: 576px) {    
     .miga {
-        @include miga($blanco);
+        @include miga(rgba($color: $blanco, $alpha: 0));
     }
 
     .miga__lista, .miga__listaItem {
@@ -74,7 +76,7 @@ $w-100: 100%;
 
 @media only screen and (max-width: 575px) {
     .miga {
-        @include miga($blanco);
+        @include miga(rgba($color: $blanco, $alpha: 0));
         font-size: 14px;
     }
 

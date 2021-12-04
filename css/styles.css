@@ -13,11 +13,6 @@ body {
   display: flex;
   flex-direction: column; }
 
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1; }
-
 section {
   margin-bottom: 4%; }
 
@@ -55,7 +50,7 @@ nav, footer {
 
 .titulos {
   width: 100%;
-  margin-top: 3rem;
+  margin-top: 6rem;
   margin-bottom: 4rem; }
 
 /* Estilos NAVBAR */
@@ -81,7 +76,9 @@ nav, footer {
     padding: 0;
     margin: 0.5% 3%;
     color: #274c77;
-    background-color: rgba(231, 236, 239, 0); }
+    background-color: rgba(231, 236, 239, 0);
+    position: relative;
+    top: 215%; }
   .miga__lista, .miga__listaItem {
     color: #274c77; }
   .miga__listaItem:hover {
@@ -92,7 +89,9 @@ nav, footer {
     padding: 0;
     margin: 0.5% 3%;
     color: #274c77;
-    background-color: #e7ecef; }
+    background-color: rgba(231, 236, 239, 0);
+    position: relative;
+    top: 215%; }
   .miga__lista, .miga__listaItem {
     color: #274c77; }
   .miga__listaItem:hover {
@@ -103,7 +102,9 @@ nav, footer {
     padding: 0;
     margin: 0.5% 3%;
     color: #274c77;
-    background-color: #e7ecef;
+    background-color: rgba(231, 236, 239, 0);
+    position: relative;
+    top: 215%;
     font-size: 14px; }
   .miga__lista, .miga__listaItem {
     color: #274c77; }
@@ -212,7 +213,8 @@ nav, footer {
   #home {
     background-image: linear-gradient(to bottom, #6096ba, #e7ecef); }
   .home__container {
-    padding-left: 4.6%; }
+    padding-left: 4.6%;
+    margin-top: 10rem; }
   .home__container--padding {
     padding: 0 4.6%; }
   .home__titulo {
@@ -229,7 +231,8 @@ nav, footer {
   #home {
     background-image: linear-gradient(to bottom, #6096ba, #e7ecef); }
   .home__container {
-    padding-left: 4.6%; }
+    padding-left: 4.6%;
+    margin-top: 8rem; }
   .home__container--padding {
     padding: 0 4.6%; }
   .home__titulo {
@@ -246,7 +249,8 @@ nav, footer {
   #home {
     background-image: linear-gradient(to bottom, #6096ba, #e7ecef); }
   .home__container {
-    padding-left: 4.6%; }
+    padding-left: 4.6%;
+    margin-top: 8rem; }
   .home__container--padding {
     padding: 0 4.6%; }
   .home__titulo {
@@ -263,7 +267,8 @@ nav, footer {
   #home {
     background-image: linear-gradient(to bottom, #6096ba, #e7ecef); }
   .home__container {
-    padding-left: 4.6%; }
+    padding-left: 4.6%;
+    margin-top: 7rem; }
   .home__container--padding {
     padding: 0 4.6%; }
   .home__titulo {
