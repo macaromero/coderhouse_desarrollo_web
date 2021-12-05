@@ -68,7 +68,7 @@ nav, footer {
   border: 0.1px solid white; }
 
 .barra__menu-small--icono {
-  background-image: url("../../media/menu.png"); }
+  background-image: url("../../media/icons/menu.png"); }
 
 /* Estilos BREADCRUMB */
 @media only screen and (min-width: 768px) {
@@ -224,8 +224,14 @@ nav, footer {
     margin-bottom: 0;
     font-weight: 600;
     text-transform: none; }
-  .home__carousel {
-    z-index: 0; } }
+  .home__card {
+    background-color: rgba(231, 236, 239, 0.3);
+    border: none;
+    align-items: center; }
+  .home__card-imagen {
+    width: 19%; }
+  .home__card-titulo {
+    font-size: 1.2rem; } }
 
 @media only screen and (max-width: 991px) and (min-width: 768px) {
   #home {
@@ -242,8 +248,14 @@ nav, footer {
     margin-bottom: 0;
     font-weight: 600;
     text-transform: none; }
-  .home__carousel {
-    z-index: 0; } }
+  .home__card {
+    background-color: rgba(231, 236, 239, 0.3);
+    border: none;
+    align-items: center; }
+  .home__card-imagen {
+    width: 19%; }
+  .home__card-titulo {
+    font-size: 1.2rem; } }
 
 @media only screen and (max-width: 767px) and (min-width: 576px) {
   #home {
@@ -260,8 +272,14 @@ nav, footer {
     margin-bottom: 0;
     font-weight: 600;
     text-transform: none; }
-  .home__carousel {
-    z-index: 0; } }
+  .home__card {
+    background-color: rgba(231, 236, 239, 0.3);
+    border: none;
+    align-items: center; }
+  .home__card-imagen {
+    width: 19%; }
+  .home__card-titulo {
+    font-size: 1.2rem; } }
 
 @media only screen and (max-width: 575px) {
   #home {
@@ -278,8 +296,14 @@ nav, footer {
     margin-bottom: 0;
     font-weight: 600;
     text-transform: none; }
-  .home__carousel {
-    z-index: 0; } }
+  .home__card {
+    background-color: rgba(231, 236, 239, 0.3);
+    border: none;
+    align-items: center; }
+  .home__card-imagen {
+    width: 19%; }
+  .home__card-titulo {
+    font-size: 1.2rem; } }
 
 /* Estilos sección HABILIDADES */
 .habilidades__barra-detras {

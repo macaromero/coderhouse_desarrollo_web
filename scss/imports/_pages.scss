@@ -56,8 +56,18 @@ $w-barrasHabilidades: (
         @include tituloHome($fuente-home)
     }
 
-    .home__carousel {
-        z-index: 0;
+    .home__card {
+        background-color: rgba($color: $blanco, $alpha: 0.3);
+        border: none;
+        align-items: center;
+    }
+
+    .home__card-imagen {
+        width: 19%;
+    }
+
+    .home__card-titulo {
+        font-size: 1.2rem;
     }
 }
 
@@ -79,8 +89,18 @@ $w-barrasHabilidades: (
         @include tituloHome($fuente-home - 10)
     }
 
-    .home__carousel {
-        z-index: 0;
+    .home__card {
+        background-color: rgba($color: $blanco, $alpha: 0.3);
+        border: none;
+        align-items: center;
+    }
+
+    .home__card-imagen {
+        width: 19%;
+    }
+
+    .home__card-titulo {
+        font-size: 1.2rem;
     }
 }
 
@@ -102,8 +122,18 @@ $w-barrasHabilidades: (
         @include tituloHome($fuente-home - 20)
     }
 
-    .home__carousel {
-        z-index: 0;
+    .home__card {
+        background-color: rgba($color: $blanco, $alpha: 0.3);
+        border: none;
+        align-items: center;
+    }
+
+    .home__card-imagen {
+        width: 19%;
+    }
+
+    .home__card-titulo {
+        font-size: 1.2rem;
     }
 }
 
@@ -125,8 +155,18 @@ $w-barrasHabilidades: (
         @include tituloHome($fuente-home - 20)
     }
 
-    .home__carousel {
-        z-index: 0;
+    .home__card {
+        background-color: rgba($color: $blanco, $alpha: 0.3);
+        border: none;
+        align-items: center;
+    }
+
+    .home__card-imagen {
+        width: 19%;
+    }
+
+    .home__card-titulo {
+        font-size: 1.2rem;
     }
 }
 
