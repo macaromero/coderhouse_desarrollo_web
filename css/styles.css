@@ -68,7 +68,7 @@ nav, footer {
   border: 0.1px solid white; }
 
 .barra__menu-small--icono {
-  background-image: url("../../media/icons/menu.png"); }
+  background-image: url("./../media/icons/menu.png"); }
 
 /* Estilos BREADCRUMB */
 @media only screen and (min-width: 768px) {
