@@ -149,7 +149,7 @@ main {
   grid-column-gap: 13px;
   border-bottom-color: #e7ecef;
   border-bottom-width: 0.1em;
-  border-bottom-style: dotted; }
+  border-bottom-style: solid; }
 
 .footer__iconos--ancla:hover {
   transform: scale(1.1, 1.1);
