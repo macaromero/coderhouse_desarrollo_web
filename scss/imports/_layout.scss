@@ -8,15 +8,6 @@ $azul: #274c77;
 $decena: 10px;
 $w-100: 100%;
 
-@mixin miga ($color) {
-    padding: 0;
-    margin: 0.5% 3%;
-    color: $azul;
-    background-color: $color;
-    position: relative;
-    top: 6.5em;
-}
-
 @mixin display($display) {
     display: $display;
 }
@@ -66,46 +57,30 @@ $w-100: 100%;
 
 
 /* Estilos BREADCRUMB */
-@media only screen and (min-width: 768px) {
-    .miga {
-        @include miga(rgba($color: $blanco, $alpha: 0));
-    }
-
-    .miga__lista, .miga__listaItem {
-        color: $azul;
-    }
-
-    .miga__listaItem:hover {
-        color: $celesteOscuro;
-    }
+.miga {
+    padding: 0;
+    margin: 0.5% 3%;
+    color: $azul;
+    background-color: rgba($color: $blanco, $alpha: 0);
+    position: relative;
+    top: 6.5em;
 }
 
-@media only screen and (max-width: 767px) and (min-width: 576px) {    
-    .miga {
-        @include miga(rgba($color: $blanco, $alpha: 0));
-    }
+.miga__lista, .miga__listaItem {
+    color: $azul;
+}
 
-    .miga__lista, .miga__listaItem {
-        color: $azul;
-    }
+.miga__listaItem:hover {
+    color: $celesteOscuro;
+}
 
-    .miga__listaItem:hover {
-        color: $celesteOscuro;
-    }
+.miga__listaItem--elegido {
+    cursor: default;
 }
 
 @media only screen and (max-width: 575px) {
     .miga {
-        @include miga(rgba($color: $blanco, $alpha: 0));
         font-size: 14px;
-    }
-
-    .miga__lista, .miga__listaItem {
-        color: $azul;
-    }
-
-    .miga__listaItem:hover {
-        color: $celesteOscuro;
     }
 }
 
@@ -133,6 +108,7 @@ $w-100: 100%;
     margin-top: 1em;
     text-transform: uppercase;
     margin-top: 0.5em;
+    cursor: default;
     font-size: $fontSize;
 }
 

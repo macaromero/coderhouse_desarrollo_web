@@ -16,6 +16,7 @@ $w-100: 100%;
     margin-bottom: 0;
     font-weight: 600;
     text-transform: none;
+    cursor: default;
     position: relative;
     animation: titulosHome 1 ease-in-out 1s;
     -webkit-animation: titulosHome 1 ease-in-out 1s;
@@ -57,6 +58,7 @@ $w-100: 100%;
     border: none;
     align-items: center;
     animation: elementosHome 1 ease-in-out 1s;
+    cursor: pointer;
 }
 
 .home__card-imagen {
@@ -214,6 +216,7 @@ $w-barrasHabilidades: (
 
 .sobre-mi__aside {
     animation: sobreMiAside 1 ease-in-out 1s;
+    cursor:default;
 }
 
 .sobre-mi__aside--img {
@@ -222,6 +225,7 @@ $w-barrasHabilidades: (
 
 .sobre-mi__section {
     animation: sobreMiSection 1 ease-in-out 1s;
+    cursor:default;
 }
 
 .sobre-mi__section--texto-resaltado {
@@ -330,6 +334,10 @@ $w-barrasHabilidades: (
     position: relative;
     animation: mediosContacto 1 ease-in-out 1s;
     -webkit-animation: mediosContacto 1 ease-in-out 1s;
+}
+
+.contacto__aside--texto {
+    cursor: default;
 }
 
 .contacto__aside--img {
