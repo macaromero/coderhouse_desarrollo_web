@@ -1,5 +1,14 @@
 $gris: #8b8c89;
 $azul: #274c77;
+$blanco: #e7ecef;
+$blancoOscuro: rgb(203, 231, 255);
+$celesteOscuro: rgb(96, 150, 186);
+
+@keyframes titulos {
+    0% {top: -1em; opacity: 0;}
+    70% {top:0.1em;}
+    100% {top: 0em; opacity: 1;}
+}
 
 
 /* Estilos textos */
@@ -13,8 +22,24 @@ $azul: #274c77;
     color: $azul;
 }
 
-.titulos { 
+.textos-blanco {
+    color: $blanco;
+}
+
+.textos-blanco-oscuro {
+    color: $blancoOscuro;
+}
+
+.textos-celeste {
+    color: $celesteOscuro;
+}
+
+.titulos {
     width: 100%;
     margin-top: 6rem;
     margin-bottom: 4rem;
+    position: relative;
+    animation: titulos 1 ease-in-out 1s;
+    -webkit-animation: titulos 1 ease-in-out 1s;
+    cursor: pointer;
 }

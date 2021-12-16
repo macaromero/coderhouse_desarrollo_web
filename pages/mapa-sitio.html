@@ -17,21 +17,45 @@
 </head>
 <body>
     <header>
-        <!-- Breadcrumb -->
-        <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb" class="miga">
-            <ol class="breadcrumb miga__lista">
-              <li class="breadcrumb-item"><a href="../index.html" class="miga__listaItem">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Mapa del sitio</li>
-            </ol>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand barra__logo" href="../index.html">
+                  <h1>
+                    <img src="../media/icons/logo.png" alt="Logo MR" class="d-inline-block barra__logo--img">
+                  </h1>
+                </a>
+              <button class="navbar-toggler barra__menu-small" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon barra__menu-small--icono"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end barra__links" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active barra__ancla" aria-current="page" href="../index.html">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link barra__ancla" href="./portfolio.html">PORTFOLIO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link barra__ancla" href="./habilidades.html">HABILIDADES</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link barra__ancla" href="./sobre-mi.html">SOBRE MÍ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link barra__ancla" href="./contacto.html">CONTACTO</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
         </nav>
     </header>
     <main>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <h2 class="titulos mapa__titulo">MAPA DEL SITIO</h2>
             </div>
-        </div>
-        <div class="container">
+
             <div class="row justify-content-center mb-5 mapa">
                 <div class="mapa__col">
                     <h3 class="mapa__subtitulo">Página de inicio</h3>
@@ -92,20 +116,23 @@
 
     <!--Footer-->
     <footer class="footer">
-        <div class="footer__iconos">
-            <a href="https://www.behance.net/macaromero" target="_blank" class="footer__iconos--logo">
-                <img src="../media/icons/behance.png" alt="Ícono de Behance" class="footer__iconos--logo--img">
+        <div class="footer__iconos text-center mt-2 pb-4">
+            <a href="https://www.behance.net/macaromero" target="_blank" class="footer__iconos--ancla">
+                <img src="../media/icons/behance.png" alt="Ícono de Behance" class="footer__iconos--img">
             </a>
-            <a href="https://www.linkedin.com/in/macarena-romero-494a5a38" target="_blank" class="footer__iconos--logo">
-                <img src="../media/icons/linkedin.png" alt="Ícono de LinkedIn" class="footer__iconos--logo--img">
+            <a href="https://www.linkedin.com/in/macarena-romero-494a5a38" target="_blank" class="footer__iconos--ancla">
+                <img src="../media/icons/linkedin.png" alt="Ícono de LinkedIn" class="footer__iconos--img">
             </a>
         </div>
         
-        <div class="footer__texto">
-            <div class="footer__texto--ancla">
-                <a href="./mapa-sitio.html" class="footer__texto--ancla">Mapa del sitio</a>
+        <div class="mt-3 footer__texto">
+            <div class="footer__link">
+                <a href="./mapa-sitio.html" class="footer__link--ancla">Mapa del sitio</a>
             </div>
-            <p>Copyright 2021 Macarena Romero</p>
+            <img src="../media/icons/logo-footer.png" alt="Logo de la marca"  class="footer__logo">
+            <div class="text-md-end">
+                <p class="footer__texto--parrafo">Copyright 2021 - Macarena Romero</p>
+            </div>
         </div>
     </footer>
 </body>

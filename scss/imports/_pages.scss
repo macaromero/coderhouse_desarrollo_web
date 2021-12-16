@@ -1,10 +1,114 @@
 $celesteOscuro: rgb(96, 150, 186);
 $celesteHover: #497e9e;
 $blanco: #e7ecef;
-$gris: rgba($color: #8b8c89, $alpha: 0.2);;
+$blancoOscuro: rgb(203, 231, 255);
+$gris: rgba($color: #8b8c89, $alpha: 0.2);
 $azul: #274c77;
 $fuente-home: 56px;
 $w-100: 100%;
+
+
+/* Estilos sección HOME */
+@mixin tituloHome ($f-size) {
+    color: $blanco;
+    font-size: $f-size;
+    text-align: left;
+    margin-bottom: 0;
+    font-weight: 600;
+    text-transform: none;
+    position: relative;
+    animation: titulosHome 1 ease-in-out 1s;
+    -webkit-animation: titulosHome 1 ease-in-out 1s;
+}
+
+@keyframes titulosHome {
+    0% {left: -1em; opacity: 0;}
+    70% {left:0.1em;}
+    100% {left: 0em; opacity: 1;}
+}
+
+@keyframes elementosHome {
+    0% {top: -1em; opacity: 0;}
+    70% {top:0.1em;}
+    100% {top: 0em; opacity: 1;}
+}
+
+
+#home { 
+    background-image: linear-gradient(to bottom, $celesteOscuro, $blanco);
+}
+
+.home__container {
+    padding-left: 4.6%;
+}
+
+.home__container--padding {
+    padding: 0 4.6%;
+}
+
+.home__video {
+    position: relative;
+    animation: elementosHome 1 ease-in-out 1s;
+    -webkit-animation: elementosHome 1 ease-in-out 1s;
+}
+
+.home__card {
+    background-color:rgba($color: $blanco,$alpha: 0.3);
+    border: none;
+    align-items: center;
+    animation: elementosHome 1 ease-in-out 1s;
+}
+
+.home__card-imagen {
+    width: 19%;
+}
+
+.home__card-titulo {
+    font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 992px) {
+    .home__container {
+        margin-top: 10rem;
+    }
+
+    .home__titulo {
+        @include tituloHome($fuente-home);
+    }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .home__container {
+        margin-top: 8rem;
+    }
+
+    .home__titulo {
+        @include tituloHome($fuente-home - 10)
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .home__container {
+        margin-top: 8rem;
+    }
+
+    .home__titulo {
+        @include tituloHome($fuente-home - 20)
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .home__container {
+        margin-top: 7rem;
+    }
+
+    .home__titulo {
+        @include tituloHome($fuente-home - 20)
+    }
+}
+
+
+/* Estilos sección HABILIDADES */
 $w-barrasHabilidades: (
     w100: 100%,
     w90: 90%,
@@ -14,16 +118,6 @@ $w-barrasHabilidades: (
     w60: 60%,
     w50: 50%
 );
-
-
-@mixin tituloHome ($f-size) {
-    color: $blanco;
-    font-size: $f-size;
-    text-align: left;
-    margin-bottom: 0;
-    font-weight: 600;
-    text-transform: none;
-}
 
 @mixin barrasHabilidades($border, $width, $color) {
     height: 16px;
@@ -37,207 +131,188 @@ $w-barrasHabilidades: (
 }
 
 
-/* Estilos sección HOME */
-@media only screen and (min-width: 992px) {
-    #home { 
-        background-image: linear-gradient(to bottom, $celesteOscuro, $blanco);
-    }
-
-    .home__container {
-        padding-left: 4.6%;
-        margin-top: 10rem;
-    }
-
-    .home__container--padding {
-        padding: 0 4.6%;
-    }
-
-    .home__titulo {
-        @include tituloHome($fuente-home)
-    }
-
-    .home__card {
-        background-color: rgba($color: $blanco, $alpha: 0.3);
-        border: none;
-        align-items: center;
-    }
-
-    .home__card-imagen {
-        width: 19%;
-    }
-
-    .home__card-titulo {
-        font-size: 1.2rem;
-    }
+.habilidades__columna:hover {
+    cursor: pointer;
 }
 
-@media only screen and (max-width: 991px) and (min-width: 768px) {
-    #home { 
-        background-image: linear-gradient(to bottom, $celesteOscuro, $blanco);
-    }
-
-    .home__container {
-        padding-left: 4.6%;
-        margin-top: 8rem;
-    }
-    
-    .home__container--padding {
-        padding: 0 4.6%;
-    }
-
-    .home__titulo {
-        @include tituloHome($fuente-home - 10)
-    }
-
-    .home__card {
-        background-color: rgba($color: $blanco, $alpha: 0.3);
-        border: none;
-        align-items: center;
-    }
-
-    .home__card-imagen {
-        width: 19%;
-    }
-
-    .home__card-titulo {
-        font-size: 1.2rem;
-    }
-}
-
-@media only screen and (max-width: 767px) and (min-width: 576px) {
-    #home { 
-        background-image: linear-gradient(to bottom, $celesteOscuro, $blanco);
-    }
-
-    .home__container {
-        padding-left: 4.6%;
-        margin-top: 8rem;
-    }
-    
-    .home__container--padding {
-        padding: 0 4.6%;
-    }
-
-    .home__titulo {
-        @include tituloHome($fuente-home - 20)
-    }
-
-    .home__card {
-        background-color: rgba($color: $blanco, $alpha: 0.3);
-        border: none;
-        align-items: center;
-    }
-
-    .home__card-imagen {
-        width: 19%;
-    }
-
-    .home__card-titulo {
-        font-size: 1.2rem;
-    }
-}
-
-@media only screen and (max-width: 575px) {
-    #home { 
-        background-image: linear-gradient(to bottom, $celesteOscuro, $blanco);
-    }
-
-    .home__container {
-        padding-left: 4.6%;
-        margin-top: 7rem;
-    }
-    
-    .home__container--padding {
-        padding: 0 4.6%;
-    }
-
-    .home__titulo {
-        @include tituloHome($fuente-home - 20)
-    }
-
-    .home__card {
-        background-color: rgba($color: $blanco, $alpha: 0.3);
-        border: none;
-        align-items: center;
-    }
-
-    .home__card-imagen {
-        width: 19%;
-    }
-
-    .home__card-titulo {
-        font-size: 1.2rem;
-    }
-}
-
-
-/* Estilos sección HABILIDADES */
 .habilidades__barra-detras {
     @include barrasHabilidades(1.25rem, 100%, $gris);
 }
 
 @each $barra, $width in $w-barrasHabilidades {
+    @keyframes efectoBarras#{$barra} {
+        0% {width: 0}
+        100% {width: $width; background-color: $azul}  
+    }
     .habilidades__barra-delante--#{$barra} {
-        @include barrasHabilidades(1.25rem, $width, $azul)
+        @include barrasHabilidades(1.25rem, $width, $azul);
+        animation-name: efectoBarras#{$barra};
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 1s;
+        animation-delay: 20ms;
     }
 }
 
 
 /* Estilos sección PORTFOLIO */
-.portfolio__row:hover .card:not(:hover) {
-    opacity: 0.7;
-    background-color: $blanco;
-    border-color: $blanco;
+@keyframes cards {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
-.img-portfolio {
+
+.portfolio__card {
+    animation: cards 1 ease-in-out 1s 50ms;
+    -webkit-animation: cards 1 ease-in-out 1s 50ms;
+    cursor: pointer;
+}
+
+.portfolio__card:hover {
+    transform: scale(1.03, 1.03);
+    -webkit-transform: scale(1.03, 1.03);
+    -moz-transform: scale(1.03, 1.03);
+    -ms-transform: scale(1.03, 1.03);
+    -o-transform: scale(1.03, 1.03);
+}
+
+.portfolio__modal {
+    top:5em;
+}
+
+.portfolio__img {
     width: $w-100;
 }
 
-iframe {
+.portfolio__video {
     width: 100%;
 }
 
-.portfolio__cardTitulo {
+.portfolio__card-titulo {
     font-size: 1rem;
     letter-spacing: -0.061em;
 }
 
 
-/* Estilos sección SOBRE MÍ */
+/* Estilos sección SOBRE MI */
+@keyframes sobreMiAside {
+    0% {left: -1em; opacity: 0;}
+    100% {left: 0em; opacity: 1;}
+}
+
+@keyframes sobreMiSection {
+    0% {right: -1em; opacity: 0;}
+    100% {right: 0em; opacity: 1;}
+}
+
+@mixin sobreMiLinea ($width, $border, $margin) {
+    width: $width;
+    border: $border;
+    margin-bottom: $margin;
+}
+
+
+.sobre-mi__aside {
+    animation: sobreMiAside 1 ease-in-out 1s;
+}
+
+.sobre-mi__aside--img {
+    width: $w-100;
+}
+
+.sobre-mi__section {
+    animation: sobreMiSection 1 ease-in-out 1s;
+}
+
+.sobre-mi__section--texto-resaltado {
+    text-transform: uppercase;
+    line-height: 34px;
+}
+
 @media only screen and (min-width: 992px) {
-    .sobre-mi__aside--img {
-        width: $w-100;
+    .sobre-mi {
+        margin-top: 1em;
+    }
+
+    .sobre-mi__aside {
+        position: relative;
+        padding-left: 0;
+        padding-right: 2.5em;
+    }
+    
+    .sobre-mi__section {
+        position: relative;
+        text-align: left;
+        margin-left: 0;
+        margin-bottom: 0;
+        padding-left: 2.5em;
+    }
+
+    .sobre-mi__section--linea {
+        @include sobreMiLinea(3.1em, $azul 2px solid, 1.9em);
+        position: relative;
+        left: 0.2em;
+    }
+
+    .sobre-mi__section--texto {
+        margin-bottom: 0;
     }
     
     .sobre-mi__section--texto-resaltado {
         font-size: 31px;
     }
-
-    .sobre-mi__section {
-        text-align: left;
-        margin-left: 0;
-    }
 }
 
 @media only screen and (max-width: 991px) {
     .sobre-mi__aside--img {
-        width: $w-100;
         margin-bottom: 3%;
-    }
-    
-    .sobre-mi__section--texto-resaltado {
-        font-size: 23px;
     }
 
     .sobre-mi__section {
         text-align: center;
     }
+
+    .sobre-mi__section--linea {
+        @include sobreMiLinea(15.9em, $azul 1px solid, 0.9em);
+        display: inline-block;
+    }
+
+    .sobre-mi__section--texto-resaltado {
+        font-size: 28px;
+    }
 }
 
 
 /* Estilos sección CONTACTO */
-.contacto__form--boton {
+@keyframes inputs {
+    0% {left: -1em; opacity: 0;}
+    100% {left: 0; opacity: 0.5;}
+}
+
+@keyframes labels {
+    0% {left: -1em; opacity: 0;}
+    100% {left: 0; opacity: 1;}
+}
+
+@keyframes mediosContacto {
+    0% {right: -1em; opacity: 0;}
+    100% {right: 0; opacity: 1;}
+}
+
+.contacto__input {
+    opacity: 0.5;
+    position: relative;
+    animation: inputs 1 ease-in-out 1s;
+    -webkit-animation: inputs 1 ease-in-out 1s;
+}
+
+.contacto__label, .contacto__boton {
+    position: relative;
+    animation: labels 1 ease-in-out 1s;
+    -webkit-animation: labels 1 ease-in-out 1s;
+}
+
+.contacto__boton {
     background-color: $celesteOscuro;
     border-color: $celesteOscuro;
     color: $blanco;
@@ -246,100 +321,63 @@ iframe {
     font-weight: 600;
 }
 
-.contacto__form--boton:hover {
+.contacto__boton:hover {
     background-color: $celesteHover;
     border-color: $celesteHover;
 }
 
+.contacto__aside {
+    position: relative;
+    animation: mediosContacto 1 ease-in-out 1s;
+    -webkit-animation: mediosContacto 1 ease-in-out 1s;
+}
+
 .contacto__aside--img {
-    width: ($w-100 / 2) + 5;
+    width: 1.2em;
 }
 
 
 /* Estilos sección MAPA DEL SITIO */
-@media only screen and (min-width: 992px) {
-    .mapa {
-        border-bottom-color: $gris;
-        border-bottom-width: 1px;
-        border-bottom-style: solid;
-    }
-    
-    .mapa__col {
-        width: auto;
-    }
-    
+.mapa {
+    border-bottom-color: $gris;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.mapa__col {
+    width: auto;
+}
+
+.mapa__titulo {
+    margin-top: 9rem;
+}
+
+.mapa__subtitulo {
+    font-size: 1.4rem;
+    color: $azul;
+    text-transform: none;
+    margin-bottom: 3%;
+}
+
+.mapa__list {
+    padding-left: 1.4rem;
+    margin-top: 4%;
+}
+
+.mapa__ancla {
+    color: $celesteOscuro;
+    text-decoration: underline;
+}
+
+.mapa__ancla:hover {
+    color: $celesteHover;
+}
+
+@media only screen and (min-width: 992px) {   
     .mapa__col--border {
         border-right-color: $gris;
         border-right-width: 1px;
         border-right-style: solid;
-    }
-    
-    .mapa__titulo {
-        background-color: $celesteOscuro;
-        color: $blanco;
-        padding: 2% 0;
-        margin-top: 0;
-    }
-    
-    .mapa__subtitulo {
-        font-size: 1.4rem;
-        color: $azul;
-        text-transform: none;
-        margin-bottom: 3%;
-    }
-    
-    .mapa__list {
-        padding-left: 1.4rem;
-        margin-top: 4%;
-    }
-    
-    .mapa__ancla {
-        color: $celesteOscuro;
-        text-decoration: underline;
-    }
-    
-    .mapa__ancla:hover {
-        color: $celesteHover;
-    }
-}
-
-@media only screen and (max-width: 991px) {
-    .mapa {
-        border-bottom-color: $gris;
-        border-bottom-width: 1px;
-        border-bottom-style: solid;
-    }
-    
-    .mapa__col {
-        width: auto;
-    }
-    
-    .mapa__titulo {
-        background-color: $celesteOscuro;
-        color: $blanco;
-        padding: 2% 0;
-        margin-top: 0;
-    }
-    
-    .mapa__subtitulo {
-        font-size: 1.4rem;
-        color: $azul;
-        text-transform: none;
-        margin-bottom: 3%;
-    }
-    
-    .mapa__list {
-        padding-left: 1.4rem;
-        margin-top: 4%;
-    }
-    
-    .mapa__ancla {
-        color: $celesteOscuro;
-        text-decoration: underline;
-    }
-    
-    .mapa__ancla:hover {
-        color: $celesteHover;
     }
 }
 

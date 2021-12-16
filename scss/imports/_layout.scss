@@ -14,7 +14,7 @@ $w-100: 100%;
     color: $azul;
     background-color: $color;
     position: relative;
-    top: 215%;
+    top: 6.5em;
 }
 
 @mixin display($display) {
@@ -27,12 +27,32 @@ $w-100: 100%;
     width: 2.6em;
 }
 
+.barra__logo:hover {
+    transform: scale(1.05, 1.05);
+    -webkit-transform: scale(1.05, 1.05);
+    -moz-transform: scale(1.05, 1.05);
+    -ms-transform: scale(1.05, 1.05);
+    -o-transform: scale(1.05, 1.05);
+}
+
+.barra__logo:active {
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+}
+
 .barra__ancla {
     color: $blancoOscuro;
 }
 
 .barra__ancla:hover {
     color: $blanco;
+}
+
+.barra__ancla:active {
+    color: rgb(186, 212, 235);
 }
 
 .barra__menu-small:focus {
@@ -91,146 +111,134 @@ $w-100: 100%;
 
 
 /* Estilos FOOTER */
+@mixin footerLogo ($width) {
+    justify-self: center;
+    opacity: 0.7;
+    width: $width; 
+}
+
+@mixin footerTexto {
+    @include display(grid);
+    grid-template-columns: repeat(3, 2fr);
+    align-items: center;
+}
+
+@mixin footerLinkAncla ($fontSize) {
+    color: $blancoOscuro;
+    text-transform: uppercase;
+    font-size: $fontSize;
+}
+
+@mixin footerTextoParrafo ($fontSize) {
+    margin-top: 1em;
+    text-transform: uppercase;
+    margin-top: 0.5em;
+    font-size: $fontSize;
+}
+
+
+.footer {
+    @include display(grid);
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+    margin-top: auto;
+}
+
+.footer__iconos {
+    @include display(grid);
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    grid-column-gap: $decena * 1.3;
+    border-bottom-color: $blanco;
+    border-bottom-width: 0.1em;
+    border-bottom-style: dotted;
+}
+
+.footer__iconos--ancla:hover {
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+}
+
+.footer__iconos--img {
+    width: $w-100;
+}
+
+.footer__link--ancla:hover {
+    color: white;
+}
+
 @media only screen and (min-width: 768px) {
-    .footer {
-        background-image: linear-gradient(to right, $celesteClaro, $celesteOscuro, $celesteClaro);
-        @include display(grid);
-        grid-template-rows: repeat(2, 1fr);
-        align-items: center;
-        margin-top: auto;
+    .footer__logo {
+        @include footerLogo(5.9em);
     }
     
-    .footer__iconos {
-        @include display(grid);
-        grid-template-columns: repeat(2, max-content);
-        justify-content: center;
-        grid-column-gap: $decena * 1.3;
-    }
-    
-    .footer__iconos--logo {
-        width: $decena * 1.8;
+    .footer__iconos--ancla {
+        width: 1.7em;
     }
 
-    .footer__iconos--logo:hover {
-        transform: scale(1.1, 1.1);
-        -webkit-transform: scale(1.1, 1.1);
-        -moz-transform: scale(1.1, 1.1);
-        -ms-transform: scale(1.1, 1.1);
-        -o-transform: scale(1.1, 1.1);
-    }
-    
-    .footer__iconos--logo--img {
-        width: $w-100;
-    }
-    
     .footer__texto {
-        justify-self: center;
-        color: $blancoOscuro;
-        font-size: $decena * 1.1;
+        @include footerTexto();
+        justify-content: space-between;
+    }
+    
+    .footer__link--ancla {
+        @include footerLinkAncla(1em);
     }
 
-    .footer__texto--ancla {
-        text-align: center;
-        color: $blancoOscuro;
-    }
-
-    .footer__texto--ancla:hover {
-        color: white;
+    .footer__texto--parrafo {
+        @include footerTextoParrafo(0.8em);
     }
 }
 
-@media only screen and (max-width: 767px) and (min-width: 321px) {
-    .footer {
-        background-image: linear-gradient(to right, $celesteClaro, $celesteOscuro, $celesteClaro);
-        @include display(grid);
-        grid-template-rows: repeat(2, 1fr);
-        align-items: center;
-        margin-top: auto;
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .footer__logo {
+        @include footerLogo(5.2em);
     }
     
-    .footer__iconos {
-        @include display(grid);
-        grid-template-columns: repeat(2, max-content);
-        justify-content: center;
-        grid-column-gap: $decena * 1.2;
-    }
-    
-    .footer__iconos--logo {
-        width: 17px;
+    .footer__iconos--ancla {
+        width: 1.4em;
     }
 
-    .footer__iconos--logo:hover {
-        transform: scale(1.1, 1.1);
-        -webkit-transform: scale(1.1, 1.1);
-        -moz-transform: scale(1.1, 1.1);
-        -ms-transform: scale(1.1, 1.1);
-        -o-transform: scale(1.1, 1.1);
-    }
-    
-    .footer__iconos--logo--img {
-        width: $w-100;
-    }
-    
     .footer__texto {
-        justify-self: center;
-        color: $blancoOscuro;
-        font-size: $decena;
+        @include footerTexto();
+        justify-content: space-between;
+    }
+    
+    .footer__link--ancla {
+        @include footerLinkAncla(0.9em);
     }
 
-    .footer__texto--ancla {
-        text-align: center;
-        color: $blancoOscuro;
-    }
-
-    .footer__texto--ancla:hover {
-        color: white;
+    .footer__texto--parrafo {
+        @include footerTextoParrafo(0.7em);
     }
 }
 
-@media only screen and (max-width: 320px) {
-    .footer {
-        background-image: linear-gradient(to right, $celesteClaro, $celesteOscuro, $celesteClaro);
-        @include display(grid);
-        grid-template-rows: repeat(2, 1fr);
-        align-items: center;
-        margin-top: auto;
+@media only screen and (max-width: 575px) {
+    .footer__logo {
+        @include footerLogo(5.2em);
     }
     
-    .footer__iconos {
-        @include display(grid);
-        grid-template-columns: repeat(2, max-content);
-        justify-content: center;
-        grid-column-gap: $decena * 1.1;
-    }
-    
-    .footer__iconos--logo {
-        width: $decena * 1.6;
+    .footer__iconos--ancla {
+        width: 1.4em;
     }
 
-    .footer__iconos--logo:hover {
-        transform: scale(1.1, 1.1);
-        -webkit-transform: scale(1.1, 1.1);
-        -moz-transform: scale(1.1, 1.1);
-        -ms-transform: scale(1.1, 1.1);
-        -o-transform: scale(1.1, 1.1);
-    }
-    
-    .footer__iconos--logo--img {
-        width: $w-100;
-    }
-    
     .footer__texto {
-        justify-self: center;
-        color: $blancoOscuro;
-        font-size: $decena - 1;
+        @include footerTexto();
     }
 
-    .footer__texto--ancla {
+    .footer__link {
         text-align: center;
-        color: $blancoOscuro;
+    }
+    
+    .footer__link--ancla {
+        @include footerLinkAncla(0.8em);
     }
 
-    .footer__texto--ancla:hover {
-        color: white;
+    .footer__texto--parrafo {
+        @include footerTextoParrafo(0.7em);
+        text-align: center;
     }
 }
