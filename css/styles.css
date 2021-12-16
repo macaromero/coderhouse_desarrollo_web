@@ -147,7 +147,7 @@ main {
   grid-template-columns: repeat(2, max-content);
   justify-content: center;
   grid-column-gap: 13px;
-  border-bottom-color: #e7ecef;
+  border-bottom-color: rgba(231, 236, 239, 0.3);
   border-bottom-width: 0.1em;
   border-bottom-style: solid; }
 
